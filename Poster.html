@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Hinte</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      background:rgb(255, 212, 219)
+    }
+
+     /* Header */
+    header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 3rem;
+      background-color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.4rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #000;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container{
+      display:flex;
+      gap:24px;
+      align-items:flex-start;
+    }
+
+    /* LINKER KOLOM */
+
+    .left-column{
+      width:40%;
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+    }
+
+    .image-box{
+      border:5px solid #000;
+      border-radius:24px;
+      overflow:hidden;
+      background:white;
+    }
+
+    .image-box img{
+      width:100%;
+      display:block;
+      object-fit:cover;
+    }
+
+    /* RECHTER KOLOM */
+
+    .right-column{
+      width:60%;
+      padding-top:10px;
+    }
+
+    h1{
+      font-size:64px;
+      font-weight:800;
+      margin-bottom:10px;
+      line-height:1;
+    }
+
+    p{
+      font-size:20px;
+      line-height:1.25;
+      margin-bottom:28px;
+      max-width:700px;
+    }
+
+    .disclaimer{
+      margin-top:10px;
+    }
+
+    .disclaimer strong{
+      font-weight:800;
+    }
+
+    @media (max-width: 1000px){
+
+      .container{
+        flex-direction:column;
+      }
+
+      .left-column,
+      .right-column{
+        width:100%;
+      }
+
+      h1{
+        font-size:48px;
+      }
+
+      p{
+        font-size:18px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <header>
+    <div class="logo">Hinte</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">Over mij</a></li>
+        <li><a href="index.html">Mijn projecten</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+
+    <!-- LINKER KANT -->
+    <div class="left-column">
+
+      <div class="image-box">
+        <img src="Images/Screenshot 2026-04-03 at 10.31.00.png" alt="Poster">
+      </div>
+
+      <div class="image-box">
+        <img src="Images/Screenshot 2026-05-07 at 20.33.07.png" alt="flyer">
+      </div>
+
+    </div>
+
+    <!-- RECHTER KANT -->
+    <div class="right-column">
+
+      <h1>Poster</h1>
+
+      <p>
+        Het eerste ontwerp is een poster die ik ontworpen heb als reclame voor een concept. Het concept is een speciale ruimte in school waar je naartoe kan voor hulp met huiswerk, mentale problemen of om gewoon te chillen. Het is bedoeld om eenzaamheid onder jongeren te verminderen zonder er een label aan de eenzaamheid te geven. De ruimte is altijd open binnen schooltijden en elke vrijdag organiseren ze leuke activiteiten voor studenten om aan mee te doen. Deze poster zou dan door de school komen te hangen als reclame om jongeren aan te trekken om naar de ruimte toe te komen. Het bevat de belangrijkste informatie en een werkende QR-Code naar een form. 
+      </p>
+
+      <p>
+        Het tweede ontwerp behoord tot ShimmerFruits (Een project die ook op deze website te vinden is). Het ontwerp is eigenlijk meer bedoeld als een flyer en om reclame te maken voor het nieuwe product. Het bevat de belangrijkste informatie en contact gegevens van het bedrijf.
+    </p>
+
+      <p>
+        Zelf vind ik het interessant om posters te ontwerpen voor mijn projecten. Helaas heb ik hier nog weinig de kans voor gehad binnen mijn opleiding en wil ik dit graag meer doen. 
+      </p>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
