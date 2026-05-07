@@ -5,20 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio Hinte</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
     }
 
-    body {
-      color: #222;
-      background-color: white;
-      line-height: 1.5;
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      background:rgb(255, 212, 219)
     }
 
-    /* Header */
+     /* Header */
     header {
       width: 100%;
       display: flex;
@@ -53,61 +51,85 @@
       text-decoration: underline;
     }
 
-    /* Hero Section */
-    .hero {
-      text-align: left;
-      padding: 4rem 3rem;
-      background: linear-gradient(to bottom, #fff, #f7f7f7);
+    .container{
+      display:flex;
+      gap:24px;
+      align-items:flex-start;
     }
 
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 1rem;
+    /* LINKER KOLOM */
+
+    .left-column{
+      width:40%;
+      display:flex;
+      flex-direction:column;
+      gap:18px;
     }
 
-    .hero p {
-      font-size: 1.1rem;
-      color: #555;
-      max-width: 500px;
+    .image-box{
+      border:5px solid #000;
+      border-radius:24px;
+      overflow:hidden;
+      background:white;
     }
 
-     /* Footer Image Section */
-    .footer-image {
-      position: relative;
-      width: 100%;
-      height: 1000px;
-      background-image: url(Images/Screenshot\ 2025-10-31\ at\ 20.31.54.png);
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
+    .image-box img{
+      width:100%;
+      display:block;
+      object-fit:cover;
     }
 
-    .footer-image h2 {
-      position: relative;
-      z-index: 1;
-      font-size: 2rem;
-      font-weight: 600;
+    /* RECHTER KOLOM */
+
+    .right-column{
+      width:60%;
+      padding-top:10px;
     }
 
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2.2rem;
+    h1{
+      font-size:64px;
+      font-weight:800;
+      margin-bottom:10px;
+      line-height:1;
+    }
+
+    p{
+      font-size:20px;
+      line-height:1.25;
+      margin-bottom:28px;
+      max-width:700px;
+    }
+
+    .disclaimer{
+      margin-top:10px;
+    }
+
+    .disclaimer strong{
+      font-weight:800;
+    }
+
+    @media (max-width: 1000px){
+
+      .container{
+        flex-direction:column;
       }
-      header {
-        flex-direction: column;
-        gap: 1rem;
+
+      .left-column,
+      .right-column{
+        width:100%;
+      }
+
+      h1{
+        font-size:48px;
+      }
+
+      p{
+        font-size:18px;
       }
     }
-    
   </style>
 </head>
-
-  <body>
+<body>
     <header>
     <div class="logo">Hinte</div>
     <nav>
@@ -119,11 +141,45 @@
     </nav>
   </header>
 
-  <section class="hero">
-    <h1>De Quietman</h1>
-  </section>
-  </body>
+  <div class="container">
 
-  <div class="footer-image"></div>
+    <!-- LINKER KANT -->
+    <div class="left-column">
 
+      <div class="image-box">
+        <img src="Images/Quiet news.png" alt="QuietMan">
+      </div>
+
+    </div>
+
+    <!-- RECHTER KANT -->
+    <div class="right-column">
+
+      <h1>De QuietMan</h1>
+
+      <p>
+        <B>Ongeveer 1,7 miljoen Nederlanders hebben het financieel zwaar, waaronder 540.000 daarvan in armoede leven. Quiet Breda en alle andere Quiet communities zetten zich in om aandacht te vragen voor de armoede en voornamelijk die armoede die in stilte geleefd wordt.</B>
+      </p>
+
+      <p>
+        Quiet creëert een plek waar mensen naar toe kunnen voor een bakje koffie of om gezellig te komen kletsen. Ze bieden geluksmomentjes aan, aan hun members. 
+Quiet wil graag meer mensen aantrekken. Daarom heb ik een concept bedacht om lawaai te maken voor stille armoede. Ik heb de Quiet man bedacht. 
+
+      </p>
+
+      <p>
+        De Quiet Man wordt ontworpen door de members van Quiet tijdens een workshop georganiseerd door SNEQ. Hierdoor is het ontwerp meer eigen aan Quiet.
+      </p>
+
+      <p>
+        Vanuit de definitieve versie van de Quiet Man wordt het gebruikt als een soort mascotte en een symbool van verbinding. Hij deelt berichten en nieuws over Quiet, zoals mooie geluksmomentjes, verhalen en updates over projecten, via sociale media en nieuwsartikelen. Zo brengt de Quiet Man de stem van Quiet Breda op een 
+creatieve en positieve manier naar buiten.
+
+      </p>
+
+    </div>
+
+  </div>
+
+</body>
 </html>
