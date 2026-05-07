@@ -5,20 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio Hinte</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
     }
 
-    body {
-      color: #222;
-      background-color: white;
-      line-height: 1.5;
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      background:rgb(255, 212, 219)
     }
 
-    /* Header */
+     /* Header */
     header {
       width: 100%;
       display: flex;
@@ -53,61 +51,85 @@
       text-decoration: underline;
     }
 
-    /* Hero Section */
-    .hero {
-      text-align: left;
-      padding: 4rem 3rem;
-      background: linear-gradient(to bottom, #fff, #f7f7f7);
+    .container{
+      display:flex;
+      gap:24px;
+      align-items:flex-start;
     }
 
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 1rem;
+    /* LINKER KOLOM */
+
+    .left-column{
+      width:40%;
+      display:flex;
+      flex-direction:column;
+      gap:18px;
     }
 
-    .hero p {
-      font-size: 1.1rem;
-      color: #555;
-      max-width: 500px;
+    .image-box{
+      border:5px solid #000;
+      border-radius:24px;
+      overflow:hidden;
+      background:white;
     }
 
-    /* Footer Image Section */
-    .footer-image {
-      position: relative;
-      width: 100%;
-      height: 1000px;
-      background-image: url(Images/Screenshot\ 2025-10-31\ at\ 17.14.14.png);
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
+    .image-box img{
+      width:100%;
+      display:block;
+      object-fit:cover;
     }
 
-    .footer-image h2 {
-      position: relative;
-      z-index: 1;
-      font-size: 2rem;
-      font-weight: 600;
+    /* RECHTER KOLOM */
+
+    .right-column{
+      width:60%;
+      padding-top:10px;
     }
 
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2.2rem;
+    h1{
+      font-size:64px;
+      font-weight:800;
+      margin-bottom:10px;
+      line-height:1;
+    }
+
+    p{
+      font-size:20px;
+      line-height:1.25;
+      margin-bottom:28px;
+      max-width:700px;
+    }
+
+    .disclaimer{
+      margin-top:10px;
+    }
+
+    .disclaimer strong{
+      font-weight:800;
+    }
+
+    @media (max-width: 1000px){
+
+      .container{
+        flex-direction:column;
       }
-      header {
-        flex-direction: column;
-        gap: 1rem;
+
+      .left-column,
+      .right-column{
+        width:100%;
+      }
+
+      h1{
+        font-size:48px;
+      }
+
+      p{
+        font-size:18px;
       }
     }
-    
   </style>
 </head>
-
-  <body>
+<body>
     <header>
     <div class="logo">Hinte</div>
     <nav>
@@ -119,11 +141,60 @@
     </nav>
   </header>
 
-  <section class="hero">
-    <h1>De "Klaarhanger"</h1>
-  </section>
+  <div class="container">
 
-  <div class="footer-image"></div>
+    <!-- LINKER KANT -->
+    <div class="left-column">
 
-  </body>
+      <div class="image-box">
+        <img src="Images/1-7afba2c1.png" alt="De Klaarhanger">
+      </div>
+
+      <div class="image-box">
+        <img src="Images/Screenshot 2025-04-04 at 15.48.24.png" alt="Empathy Map">
+      </div>
+
+    </div>
+
+    <!-- RECHTER KANT -->
+    <div class="right-column">
+
+      <h1>De Klaarhanger</h1>
+
+      <p>
+        Dit project is gemaakt in samenwerking met Liv, Jerry, Kevin en
+        Noera, medestudenten van mij.
+      </p>
+
+      <p>
+        Dit project is gemaakt voor mensen met dementie. De bedoeling
+        was om iets te ontwerpen waardoor mensen met dementie langer thuis
+        zouden kunnen blijven. Uit een gekregen onderzoek van onze
+        opdrachtgevers kwamen we erachter dat de meerderheid van deze
+        mensen zichzelf niet meer kon aankleden maar dat wel graag zelf
+        wilde kunnen. Daarom hebben wij de klaarhanger ontworpen.
+      </p>
+
+      <p>
+        De klaarhanger is eigenlijk een soort kledinghanger, maar wat deze
+        kledinghanger zo bijzonder maakt is dat, het met behulp van
+        verlichting, laat zien in welke volgorde je je kleding aan moet
+        trekken. Aan deze kledinghanger kun je alles aanhangen, van een
+        blouse tot aan de sokken en horloges. Als je het eerste
+        kledingstuk eraf gehaald is, gaat na een paar seconde het tweede
+        lichtje branden.
+      </p>
+
+      <p class="disclaimer">
+        <strong>Disclaimer:</strong>
+        Ik heb niet de techniek/arduino gedaan, ik heb vooral geholpen
+        met de prototypes, het brainstormen, de proces poster en het in
+        elkaar zetten van het eindproduct.
+      </p>
+
+    </div>
+
+  </div>
+
+</body>
 </html>
