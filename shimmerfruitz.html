@@ -4,21 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio Hinte</title>
-<style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
     }
 
-    body {
-      color: #222;
-      background-color: white;
-      line-height: 1.5;
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      background:rgb(255, 212, 219)
     }
 
-    /* Header */
+     /* Header */
     header {
       width: 100%;
       display: flex;
@@ -53,61 +51,85 @@
       text-decoration: underline;
     }
 
-    /* Hero Section */
-    .hero {
-      text-align: left;
-      padding: 4rem 3rem;
-      background: linear-gradient(to bottom, #fff, #f7f7f7);
+    .container{
+      display:flex;
+      gap:24px;
+      align-items:flex-start;
     }
 
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 1rem;
+    /* LINKER KOLOM */
+
+    .left-column{
+      width:40%;
+      display:flex;
+      flex-direction:column;
+      gap:18px;
     }
 
-    .hero p {
-      font-size: 1.1rem;
-      color: #555;
-      max-width: 500px;
+    .image-box{
+      border:5px solid #000;
+      border-radius:24px;
+      overflow:hidden;
+      background:white;
     }
 
-      /* Footer Image Section */
-    .footer-image {
-      position: relative;
-      width: 100%;
-      height: 1000px;
-      background-image: url(Images/Screenshot\ 2025-10-31\ at\ 20.00.12.png);
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
+    .image-box img{
+      width:100%;
+      display:block;
+      object-fit:cover;
     }
 
-    .footer-image h2 {
-      position: relative;
-      z-index: 1;
-      font-size: 2rem;
-      font-weight: 600;
+    /* RECHTER KOLOM */
+
+    .right-column{
+      width:60%;
+      padding-top:10px;
     }
 
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2.2rem;
+    h1{
+      font-size:64px;
+      font-weight:800;
+      margin-bottom:10px;
+      line-height:1;
+    }
+
+    p{
+      font-size:20px;
+      line-height:1.25;
+      margin-bottom:28px;
+      max-width:700px;
+    }
+
+    .disclaimer{
+      margin-top:10px;
+    }
+
+    .disclaimer strong{
+      font-weight:800;
+    }
+
+    @media (max-width: 1000px){
+
+      .container{
+        flex-direction:column;
       }
-      header {
-        flex-direction: column;
-        gap: 1rem;
+
+      .left-column,
+      .right-column{
+        width:100%;
+      }
+
+      h1{
+        font-size:48px;
+      }
+
+      p{
+        font-size:18px;
       }
     }
-    
   </style>
 </head>
-
-  <body>
+<body>
     <header>
     <div class="logo">Hinte</div>
     <nav>
@@ -119,11 +141,45 @@
     </nav>
   </header>
 
-  <section class="hero">
-    <h1>Shimmer Fruitz</h1>
-  </section>
+  <div class="container">
 
-  <div class="footer-image"></div>
+    <!-- LINKER KANT -->
+    <div class="left-column">
 
-  </body>
+      <div class="image-box">
+        <img src="Images/mockupsblikje (1).png" alt="Empathy Map">
+      </div>
+
+      <div class="image-box">
+        <img src="Images/Screenshot 2025-09-15 at 20.15.12.png" alt="Funky moodboard">
+      </div>
+
+    </div>
+
+    <!-- RECHTER KANT -->
+    <div class="right-column">
+
+      <h1>ShimmerFruitz</h1>
+
+      <p>
+        Voor een van onze schoolprojecten heb ik een eigen frisdrank merk ontworpen.
+      </p>
+
+      <p>
+        Mijn frisdrank merk is gebaseerd op het thema funky. Als onderzoek en visualisatie heb ik hierbij een moodboard gemaakt. 
+      </p>
+
+      <p>
+        Mijn frisdrank merk bestaat uit disco fruit en komt in verschillende smaken. Ik heb ervoor gekozen om een van de smaken uit te werken; Strawberry Tropical Flavor. Ik heb ervoor gekozen om de fruit smaken voor te doen als disco fruit, dit heb ik gedaan omdat disco ballen vaak gezien worden als iets funky. Discoballen worden vaak gezien als funky door de lichtweerkaatsingen die alle richtingen opgaan. Je herkent de smaak aan de disco aardbei en de tropische bloem op de voorzijde. Ook heb ik het design van het blikje roze gemaakt om het meer herkenbaar te maken als een aardbei. Om het funky effect te versterken heb ik lijnen toegevoegd in aparte en abstracte vormen.
+      </p>
+
+      <p>
+        Op de achterzijde bevinden zich ook nog de ingrediënten en eventuele extra informatie.
+      </p>
+
+    </div>
+
+  </div>
+
+</body>
 </html>
